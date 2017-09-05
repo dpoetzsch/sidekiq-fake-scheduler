@@ -3,8 +3,6 @@
 require 'spec_helper'
 
 RSpec.describe SidekiqFakeScheduler do
-  before { FakeWorker.performs.clear }
-
   describe '#work' do
     context 'with job that is due immediately' do
       before do

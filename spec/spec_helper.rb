@@ -19,6 +19,9 @@ RSpec.configure do |config|
   config.before(:each) do
     # clear worker queues
     Sidekiq::Worker.clear_all
+
+    # clear all notes on performs
+    FakeWorker.performs.clear
   end
 
   config.filter_run focus: true

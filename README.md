@@ -86,6 +86,12 @@ Or install it yourself as:
 Whenever you want to perform sidekiq jobs just call `SidekiqFakeScheduler.work`.
 Use timecop or a similar library to travel in time.
 
+### Clockwork
+
+Many people use sidekiq jobs in combination with [clockwork](https://github.com/Rykian/clockwork) for periodic jobs.
+There exist several libraries for manually scheduling clockwork tasks similar to this one.
+I personally use (and maintain) [clockwork-mocks](https://github.com/dpoetzsch/clockwork-mocks) that was built in the same spirit using similar techniques.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

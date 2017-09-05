@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'sidekiq/mocks'
+require 'sidekiq_fake_scheduler'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

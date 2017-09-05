@@ -3,11 +3,11 @@
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'sidekiq_mocks/version'
+require 'sidekiq_fake_scheduler/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'sidekiq-mocks'
-  spec.version       = SidekiqMocks::VERSION
+  spec.name          = 'sidekiq-fake-scheduler'
+  spec.version       = SidekiqFakeScheduler::VERSION
   spec.authors       = ['David Poetzsch-Heffter']
   spec.email         = ['davidpoetzsch@web.de']
 
@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.description   = "This gem provides behavior similar to sidekiq's inline mode but respects starting " \
     'dates for scheduled jobs. This is especially useful for integration testing when asserting that certain ' \
     'things happen within a certain time frame.'
-  spec.homepage      = 'https://github.com/dpoetzsch/sidekiq-mocks'
+  spec.homepage      = 'https://github.com/dpoetzsch/sidekiq-fake-scheduler'
   spec.license       = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
